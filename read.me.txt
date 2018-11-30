@@ -1,0 +1,25 @@
+1/ pour cloner le repository, faire 
+git clone https://github.com/PLESSYthomas/reservation.git
+
+2/une fois le dossier cloné, faire
+ng serve --open
+
+3/ si il y a une erreur, faire
+npm install --save-dev @angular-devkit/build-angular
+
+4/ Angular se fait par instanciation de classe
+On ne touche pas au main, car c'est la classe mère du projet
+
+5/ Toutes les pages ont été créés donc pas besoin d'en recréer de nouvelles
+
+6/ il est possible que pour une page, vous importiez des components, il ne faut pas faire ça n'importe comment,
+	on se place dans le dossier et on fait un ng generate component, on se met pas dans le dossier source
+
+7/ s'il y a des erreurs, internet est votre ami, faites vos recherches
+	=> elles peuvent être visible si vous allez dans la console de la page
+
+8/ On utilise Angluar/material donc allez sur le site: https://material.angular.io/
+
+9/ On ne fait pas de git push inutile, si vous avez foiré des parties, vous devez faire un pull
+
+10/ Good Luck Have Fun

@@ -41,8 +41,8 @@ body {
 }
 ul {
   list-style: none;
-  	margin-left:22%;
-	margin-right:15%;
+  	margin-left:48%;
+	margin-right:5%;
 }
 
 
@@ -54,7 +54,7 @@ a {
 
 
 
-.logo,.compte {
+.logo {
 	
 	margin-top:-10px;
 	padding-bottom:5px;
@@ -99,6 +99,6 @@ li{
 }
 .compte{
 	position:fixed;
-   top:-1px;;
-   right:10px;
+   top:0;
+   right:20px;
 }
