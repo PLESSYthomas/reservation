@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehiculesComponent implements OnInit {
 
-  constructor() { }
+ public show:boolean = false;
+  public buttonName:any = 'Show';
 
-  ngOnInit() {
-  }
+  ngOnInit () { 
+	$('#showall').click(function(){
+    $('div[id^=div]').show();
+});
 
+$('#showdiv1').click(function(){
+    $('#div1').show();
+    $('div[id^=div]').not('#div1').show();
+});
+
+}
 }
