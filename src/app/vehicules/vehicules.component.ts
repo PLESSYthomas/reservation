@@ -11,14 +11,6 @@ export class VehiculesComponent implements OnInit {
   public buttonName:any = 'Show';
 
   ngOnInit () { 
-	$('#showall').click(function(){
-    $('div[id^=div]').show();
-});
-
-$('#showdiv1').click(function(){
-    $('#div1').show();
-    $('div[id^=div]').not('#div1').show();
-});
 
 }
 }
