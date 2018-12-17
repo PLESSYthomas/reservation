@@ -13,6 +13,8 @@ import { VehiculesComponent } from './vehicules/vehicules.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProposComponent } from './propos/propos.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+
 
 
 const routes: Routes = [
@@ -20,8 +22,9 @@ const routes: Routes = [
   { path: 'Vehicule', component: VehiculesComponent },
   { path: 'Reservation', component: ReservationComponent },
   { path: 'Contact', component: ContactComponent },
-  { path: 'Propos', component: ContactComponent },
+  { path: 'Propos', component: ProposComponent },
   { path: 'Disponibilite', component: DisponibiliteComponent },
+  { path: 'login', component: LoginComponent },
 
 ]
 
@@ -34,7 +37,8 @@ const routes: Routes = [
     VehiculesComponent,
     ContactComponent,
     ProposComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
