@@ -2,4 +2,5 @@ html{
 	height:100%;
 	width:auto;
 	background-image:url("https://images.designtrends.com/wp-content/uploads/2015/11/25102004/Car-Background-Designs4.jpg");
+	overflow: auto;
 }

@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule,Routes, Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +16,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ProposComponent } from './propos/propos.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -25,7 +30,8 @@ const routes: Routes = [
   { path: 'Propos', component: ProposComponent },
   { path: 'Disponibilite', component: DisponibiliteComponent },
   { path: 'login', component: LoginComponent },
-
+  { path: 'admin', component: AdminComponent },
+ 
 ]
 
 @NgModule({
@@ -38,7 +44,9 @@ const routes: Routes = [
     ContactComponent,
     ProposComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -49,9 +57,10 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+	FormsModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
