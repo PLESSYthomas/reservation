@@ -1,19 +1,32 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
-@Injectable({
-  providedIn: 'root'
-})
+import { HttpClient } from '@angular/common/http'
+
+interface myData {
+  success: boolean,
+  message: string
+}
+
+@Injectable()
 export class AuthService {
 
-  constructor() { }
+  private loggedInStatus = false
 
-  getUserDetails(username,password) {
-    /*
-    return this.http.post('/api/auth.php', {
-      username,password
-    }).subscribe(data => {
-      console.log(data," est le formulaire que l'on veut sur le serveur")
-    })
-    */
+  constructor(private http: HttpClient) { }
+
+  setLoggedIn(value: boolean) {
+    this.loggedInStatus = value
   }
+
+  get isLoggedIn() {
+    return this.loggedInStatus
+  }
+
+  getUserDetails(username, password) {
+    // post these details to API server return user info if correct
+    return this.http.post<myData>('http://localhost/api/auth.php', {
+      username,
+      password
+    })
+  }
+
 }

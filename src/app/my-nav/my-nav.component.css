@@ -1,12 +1,12 @@
 html, body{
   height: 100%;
-  overflow: auto;
+  
 }
 
 
 #wrapper{
   display: flex;
-  width: 100%;
+  width: auto;
   height: auto;
   align-items: center;
   text-align: center;

@@ -1,0 +1,94 @@
+<body>
+<div id="mesreserv">
+  <h2>Mes réservations</h2>
+
+  <div class="list-group">
+    <div *ngFor="let item of cars;let i = index;" class="list-group-item row" id="items">
+     
+	<div class="col-md-4">
+	  <label id="titre">Destination</label><br>
+        <input type="text"
+               [(ngModel)]="cars[i].Destination"
+               class="form-control"
+               required
+               #Destination="ngModel"
+               [ngClass]="{ 'is-invalid': Destination.touched && Destination.invalid }">
+      </div>
+
+	 <div class="col-md-4">
+
+        <input type="date"
+               [(ngModel)]="cars[i].dateAller"
+               class="form-control"
+               required
+               pattern="^[a-zA-Z]+$"
+               #dateAller="ngModel"
+               [ngClass]="{ 'is-invalid': dateAller.touched && dateAller.invalid }">
+      </div>
+	  
+	  
+      <div class="col-md-4">
+        <input type="date"
+               [(ngModel)]="cars[i].dateRetour"
+               class="form-control"
+               required
+               #dateRetour="ngModel"
+               [ngClass]="{ 'is-invalid': dateRetour.touched && dateRetour.invalid }">
+      </div>
+	  
+	  
+	  
+	  <div class="col-md-4">
+        <input type="text"
+               [(ngModel)]="cars[i].objet"
+               class="form-control"
+               required
+               #objet="ngModel"
+               [ngClass]="{ 'is-invalid': objet.touched && objet.invalid }">
+      </div>
+	  
+	  <div class="col-md-4">
+        <input type="form-control"
+               [(ngModel)]="cars[i].Passagers"
+               class="form-control"
+               required
+               #Passagers="ngModel"
+               [ngClass]="{ 'is-invalid': Passagers.touched && Passagers.invalid }">
+      </div>
+	  
+	   <div class="col-md-4">
+	   
+        <input type="checkbox"
+               [(ngModel)]="cars[i].gps"
+               class="form-control"
+               #gps="ngModel"
+               [ngClass]="{ 'is-invalid': gps.touched && gps.invalid }">
+      </div>
+	  
+	  <div class="col-md-4">
+	  <label id="Voiture">Voiture :</label><br>
+        <input type="text"
+               [(ngModel)]="cars[i].Voiture"
+               class="form-control"
+               required
+               #Voiture="ngModel">
+      </div>
+	  
+      <div class="col-md-4">
+        <input type="button"
+               value="Update"
+               class="btn btn-success btn-sm"
+			   
+               (click)="updateCar(dateAller,dateRetour,Destination,objet,Passagers,gps,Voiture, item.id)">
+      </div>
+	  <div>
+	  <input type="button"
+                 value="Delete"
+                 class="btn btn-danger btn-sm"
+                 (click)="deleteCar(item.id)">
+
+        </div>
+    </div>
+  </div>
+</div>
+</body>

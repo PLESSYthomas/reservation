@@ -1,4 +1,4 @@
-#Réservation {
+#mesreserv {
     display: flex;
     position: absolute;
     width: 95%;
@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+	background-image:url("https://cdn.shopify.com/s/files/1/0533/2089/files/5-websites-to-download-free-subtle-textures-subtle.jpg?5724472906039650661");
 
 }
 
@@ -77,16 +77,27 @@ form{
 #vt3{
 	margin-left:10px;
 }
-html{
-	background-image:url("http://images.4ever.eu/data/download/transport/route-par-la-foret,-tunnel-vert,-arbres-237288.jpg?no-logo");
-	background-repeat: no-repeat;
+body{
+
 	background-size: cover;
 	background-position:bottom;
 	position:relative;
-	top:-2px;
-	left:-1px;
+	top:-20px;
+	left:-6px;
 	width:auto;
 	padding-top:1%;
+	overflow-x:hidden;
+	width:120%;
 
 }
-
+#items{
+	background-color:#774A35;
+	width: auto;
+    height: auto;
+	border: 5px;
+	border-color:black;
+    box-shadow: 2px 2px 12px #555;
+	border-radius:20px;
+	opacity: 0.95;
+	margin-bottom:50px;
+}

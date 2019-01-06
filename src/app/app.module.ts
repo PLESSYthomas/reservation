@@ -18,8 +18,13 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
-import { HttpClientModule } from '@angular/common/http'
-
+import { HttpClientModule } from '@angular/common/http';
+import { MesreservComponent } from './mesreserv/mesreserv.component';
+import { GestionreservComponent } from './gestionreserv/gestionreserv.component';
+import { GestionUtilisateurComponent } from './gestion-utilisateur/gestion-utilisateur.component'
+import { AuthService } from './auth.service'
+import { AuthGuard } from './auth.guard'
+import { UserService } from './user.service'
 
 
 const routes: Routes = [
@@ -30,7 +35,11 @@ const routes: Routes = [
   { path: 'Propos', component: ProposComponent },
   { path: 'Disponibilite', component: DisponibiliteComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin', component: AdminComponent, canActivate:[AuthGuard] },
+  { path: 'mesreservations', component: MesreservComponent,canActivate:[AuthGuard] },
+  { path: 'gestionreserv', component: GestionreservComponent,canActivate:[AuthGuard] },
+  { path: 'gestionUtilisateur', component: GestionUtilisateurComponent,canActivate:[AuthGuard] },
+  
  
 ]
 
@@ -46,7 +55,10 @@ const routes: Routes = [
     HomeComponent,
     LoginComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    MesreservComponent,
+    GestionreservComponent,
+    GestionUtilisateurComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +73,7 @@ const routes: Routes = [
     HttpClientModule,
 	FormsModule,
   ],
+  providers: [AuthService,UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

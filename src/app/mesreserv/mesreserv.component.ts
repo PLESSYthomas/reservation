@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Car } from 'src/app/car';
 import { CarService } from 'src/app/car.service';
-
 @Component({
-  selector: 'app-reservation',
-  templateUrl: './reservation.component.html',
-  styleUrls: ['./reservation.component.css']
+  selector: 'app-mesreserv',
+  templateUrl: './mesreserv.component.html',
+  styleUrls: ['./mesreserv.component.css']
 })
-export class ReservationComponent implements OnInit {
+export class MesreservComponent implements OnInit {
 
  cars: Car[];
   error = '';
@@ -85,4 +83,5 @@ export class ReservationComponent implements OnInit {
   }
 
 }
+
 

@@ -1,9 +1,9 @@
+<html>
 <div id="Réservation">
-  <h2>Réservation</h2>
   <form #f="ngForm" name="theForm" (submit)="addCar(f)">
   
   <div class="form-group">
-      <label>Destination</label>
+      <label id="titre">Destination</label><br>
       <input type="text"
             class="form-control"
             name="Destination"
@@ -12,10 +12,9 @@
             required>
 	
     </div>
-  
-  
+    
     <div class="form-group">
-      <label>Date aller</label>
+      <label id="titre">Date aller</label><br>
       <input type="date"
             class="form-control"
             name="dateAller"
@@ -26,7 +25,7 @@
     </div>
 
    <div class="form-group">
-      <label>Date aller</label>
+      <label id="titre">Date Retour</label><br>
       <input type="date"
             class="form-control"
             name="dateRetour"
@@ -36,7 +35,7 @@
     </div>
 
 	<div class="form-group">
-      <label>objet</label>
+      <label id="objet"> Objet</label>
       <select
             class="form-control"
             name="objet"
@@ -44,14 +43,15 @@
             #Objet="ngModel"
             required>
 			
-		<option value="spageti"> spageti </option>
-		<option value="spagaeti"> spagaeti </option>
-		<option value="spagreti"> spagreti </option>
+		<option value="réunion"> réunion </option>
+		<option value="congrès"> congrès </option>
+		<option value="visite"> visite des stagiaires </option>
+		<option value="autres"> autre </option>
 		</select>
     </div>
 	
-	<div class="form-group">
-      <label>Passagers</label>
+	<div id="form-group">
+      <label id="Passagers">Passagers</label>
       <select
             class="form-control"
             name="Passagers"
@@ -70,20 +70,21 @@
     </div>
 	
 	<div class="form-group">
-      <label>GPS</label>
+      <label  id="GPS">GPS</label>
       <input type="checkbox"
             class="form-control"
             name="gps"
+			id="gpda"
             [(ngModel)]="car.gps"
             #gps="ngModel"
-			value="GPS"
-            required>
+			value="GPS">
             
     </div>
 	
 	<div class="form-group">
-	  <label>Voiture :</label>
-      <label>Clio</label>
+	  <label id="Voiture">Voiture :</label><br><br>
+	  
+      <label id="vt1">Clio</label>
       <input type="radio"
             class="form-control"
             name="voiture"
@@ -93,7 +94,7 @@
             required>
             
    
-	<label>kangoo</label>
+	<label id="vt2">kangoo</label>
       <input type="radio"
             class="form-control"
             name="voiture"
@@ -102,7 +103,7 @@
 			value="kangoo"
             required>
             
-	<label>scenic</label>
+	<label id="vt3">scenic</label>
       <input type="radio"
             class="form-control"
             name="voiture"
@@ -119,3 +120,4 @@
         [disabled]="f.invalid">Add</button>
   </form>
 </div>
+</html>

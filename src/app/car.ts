@@ -2,9 +2,10 @@ export class Car {
   constructor(
     dateAller: string,
     dateRetour: string,
+	Destination: string,
 	objet: string,
 	Passagers: number,
-	gps: boolean,
+	gps: number,
 	voiture: string,	
     id?:   number) {}
 }

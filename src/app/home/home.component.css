@@ -1,14 +1,14 @@
+
 html{
 	background-image:url("back.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position:bottom;
 	position:relative;
-	top:-7vh;
 	left:-1px;
 	width:100.1vw;
-	padding-top:1%;
-	overflow: auto;
+	overflow-y: hidden;
+	height:90.9vh;
 
 }
 

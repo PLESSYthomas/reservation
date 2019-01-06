@@ -42,6 +42,7 @@ constructor(private http: HttpClient) { }
         if (theCar) {
           theCar['dateAller'] = car['dateAller'];
           theCar['dateRetour'] = car['dateRetour'];
+		  theCar['Destination'] = car['Destination'];
 		  theCar['objet'] = car['objet'];
 		  theCar['Passagers'] = car['Passagers'];
 		  theCar['gps'] = car['gps'];
