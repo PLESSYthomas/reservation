@@ -1,47 +1,71 @@
 body{
    width:100%;
-   height:100%;
-   background: #eee;
-}
-div.menu{
-  
-   margin: 5% 10%;
-   background: transparent;
+   height:auto;
+   background: #CECECE;
+   display: flex;
+	flex-direction: column;
+	flex-flow: row wrap;
+	justify-content: center;
+	font-family:arial;
+
+	
+
 }
 
-a, #showall{
-   display:inline-block;
-   margin:0 1%;
-   padding:2%;
-   border-radius: 10%;
-   -webkit-box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.2);
-   -moz-box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.2);
-   box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.2);
+.barre {
+    border:1px solid #666;
+    width:200px;
+    height:30px;
+	border-radius: 10px;
+	margin-left:15%;
 }
-a:nth-child(1){
-  background:#E63946; 
-   color: #eee;
+.jaugea{
+    background: #696969;
+    height:100%;
+    width:50%;
+	border-radius: 10px;
 }
-a:nth-child(2){
-    background:#F1FAEE; 
-   color: #222;
-}
-a:nth-child(3){
-   background: #A8DADC; 
-    color: #222;
-  
-}
-a:nth-child(4){
-   background: #457B9D;
-   color: #eee;
-}
-a:nth-child(5){
-   background: #1D3557;  
-   color: #eee;
+.jaugeb{
+    background: #696969;
+    height:100%;
+    width:68%;
+	border-radius: 10px;
 }
 
+.jaugec{
+    background: #696969;
+    height:100%;
+    width:58%;
+	border-radius: 10px;
+}
 
-.cnt{
-   margin: 5% 10%;
-   background: transparent;
+.Scenic{
+	width:auto;
+	background:#A9A9A9;
+
+	text-align: center;
+	margin: 5%;
+
+}
+.clio{
+	width:auto;
+	background:#A9A9A9;
+
+	text-align: center;
+	margin: 5%;
+}
+.Kangoo{
+	width:auto;
+	background:#A9A9A9;
+
+	text-align: center;
+	margin: 5%;
+}
+div{
+		border-radius:17px;
+}
+#a{
+	font-size:17px;
+	font-weight:bold;
+	
 }

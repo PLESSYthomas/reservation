@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
+//permet de verifier et de connecter un utilisateur
+
 interface myData {
   message: string,
   success: boolean

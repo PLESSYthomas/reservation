@@ -1,9 +1,12 @@
+<!-- barre de navigation créer à partir de de angular/material -->
+
 <mat-sidenav-container class="sidenav-container">	
   <div id="wrapper">
 		<div class="block left">
     	<a href="#"><img src="assets/img/logo.jpg" height="auto" width="200"></a>
 		</div>
 		<div class="block center">
+		<!-- accès aux différentes pages de l'application -->
 		<ul id="menu">
 			<li><a href="/Reservation">Réservation</a><li>
 			<li><a href="/Disponibilite">Disponibilité</a><li>
@@ -16,4 +19,6 @@
 	</div>
 
 </mat-sidenav-container>
+
+<!-- le router outlet va permettre de recevoir le contenu des différentes pages pour le placer , ici , en dessous de la barre de navigation -->
 <router-outlet></router-outlet>

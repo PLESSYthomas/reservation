@@ -14,7 +14,7 @@ export class AuthGuard implements CanActivate {
     private user: UserService) {
 
   }
-
+	// permet de vérifier si l'utilisateur est authentifié avant qu'il se déplace sur une page
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {

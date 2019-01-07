@@ -9,11 +9,16 @@ import { Car } from './car';
 @Injectable({
   providedIn: 'root'
 })
+
+// permet les différentes interractions de l'application avec la base de données concernant les réservations
+
 export class CarService {
   baseUrl = 'http://localhost/api';
   cars: Car[];
 
 constructor(private http: HttpClient) { }
+
+// permet d'obtenir la liste des réservations
 
   getAll(): Observable<Car[]> {
     return this.http.get(`${this.baseUrl}/list`).pipe(
@@ -24,6 +29,8 @@ constructor(private http: HttpClient) { }
     catchError(this.handleError));
   }
 
+// permet de sauvegarder les réservations
+
   store(car: Car): Observable<Car[]> {
     return this.http.post(`${this.baseUrl}/store`, { data: car })
       .pipe(map((res) => {
@@ -32,6 +39,8 @@ constructor(private http: HttpClient) { }
       }),
       catchError(this.handleError));
   }
+
+// permet de mettre à jour la réservation
 
   update(car: Car): Observable<Car[]> {
     return this.http.put(`${this.baseUrl}/update`, { data: car })
@@ -53,6 +62,8 @@ constructor(private http: HttpClient) { }
       catchError(this.handleError));
   }
 
+// permet de supprimer la réservation
+
   delete(id: number): Observable<Car[]> {
     const params = new HttpParams()
       .set('id', id.toString());
@@ -69,8 +80,6 @@ constructor(private http: HttpClient) { }
 
   private handleError(error: HttpErrorResponse) {
     console.log(error);
-
-    // return an observable with a user friendly message
-    return throwError('Error! something went wrong.');
+    return throwError('Grossière erreur');
   }
 }

@@ -12,6 +12,7 @@ export class AdminComponent implements OnInit {
 
 	message = "Chargement..."
 
+// permet de vérifier le statut de connexion
   ngOnInit() {
 	  this.user.getSomeData().subscribe(data => {
 		  this.message = data.message

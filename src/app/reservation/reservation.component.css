@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+	color:white;
 
 }
 
@@ -48,7 +48,7 @@ button{
 	margin-left:35%;
 }
 form{
-	background-color:#774A35;
+	background-color:#474747;
 	width: auto;
     height: auto;
 	border: 5px;

@@ -1,8 +1,11 @@
+// import des différents composants externes
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule,Routes, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+// import des différents composants internes
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,12 +28,15 @@ import { GestionUtilisateurComponent } from './gestion-utilisateur/gestion-utili
 import { AuthService } from './auth.service'
 import { AuthGuard } from './auth.guard'
 import { UserService } from './user.service'
+import { CarService } from './car.service'
+import { MessageService } from './message.service'
 
+// routage de l'application
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'Vehicule', component: VehiculesComponent },
-  { path: 'Reservation', component: ReservationComponent },
+  { path: 'Reservation', component: ReservationComponent,canActivate:[AuthGuard]  },
   { path: 'Contact', component: ContactComponent },
   { path: 'Propos', component: ProposComponent },
   { path: 'Disponibilite', component: DisponibiliteComponent },
@@ -44,6 +50,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
+	//declarations des composants
   declarations: [
     AppComponent,
     MyNavComponent,
@@ -60,6 +67,7 @@ const routes: Routes = [
     GestionreservComponent,
     GestionUtilisateurComponent
   ],
+  //import des composants
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -73,6 +81,7 @@ const routes: Routes = [
     HttpClientModule,
 	FormsModule,
   ],
+  //fournisseurs d'accès aux différents services de l'application
   providers: [AuthService,UserService, AuthGuard],
   bootstrap: [AppComponent]
 })

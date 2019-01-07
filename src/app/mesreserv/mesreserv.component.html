@@ -1,11 +1,17 @@
+<!-- page permettant de visualiser ses rÈservations -->
 <body>
 <div id="mesreserv">
   <h2>Mes r√©servations</h2>
 
   <div class="list-group">
+  
+  <!-- permet de montrer les diffÈrentes rÈservations effectuer -->
+  <!-- *ngFor="let item of cars permet de lister le contenu de car : les reservations -->
     <div *ngFor="let item of cars;let i = index;" class="list-group-item row" id="items">
      
+	 <!-- la destination -->
 	<div class="col-md-4">
+	
 	  <label id="titre">Destination</label><br>
         <input type="text"
                [(ngModel)]="cars[i].Destination"
@@ -14,9 +20,9 @@
                #Destination="ngModel"
                [ngClass]="{ 'is-invalid': Destination.touched && Destination.invalid }">
       </div>
-
+	<!-- la date d'aller -->
 	 <div class="col-md-4">
-
+		<label id="titre">Date Aller</label><br>
         <input type="date"
                [(ngModel)]="cars[i].dateAller"
                class="form-control"
@@ -26,8 +32,9 @@
                [ngClass]="{ 'is-invalid': dateAller.touched && dateAller.invalid }">
       </div>
 	  
-	  
+	  <!-- la date de retour -->
       <div class="col-md-4">
+	   <label id="titre">Date Retour</label><br>
         <input type="date"
                [(ngModel)]="cars[i].dateRetour"
                class="form-control"
@@ -36,9 +43,9 @@
                [ngClass]="{ 'is-invalid': dateRetour.touched && dateRetour.invalid }">
       </div>
 	  
-	  
-	  
+	  <!-- l'objet de la demande -->
 	  <div class="col-md-4">
+	   <label id="titre">Objet</label>
         <input type="text"
                [(ngModel)]="cars[i].objet"
                class="form-control"
@@ -47,7 +54,9 @@
                [ngClass]="{ 'is-invalid': objet.touched && objet.invalid }">
       </div>
 	  
+	  <!-- le nombre de passager de l'application -->
 	  <div class="col-md-4">
+	   <label id="titre">Passagers</label>
         <input type="form-control"
                [(ngModel)]="cars[i].Passagers"
                class="form-control"
@@ -56,8 +65,10 @@
                [ngClass]="{ 'is-invalid': Passagers.touched && Passagers.invalid }">
       </div>
 	  
+	  
+	  <!-- l'utilisation ou non d'un gps -->
 	   <div class="col-md-4">
-	   
+	    <label id="titre">GPS</label><br>
         <input type="checkbox"
                [(ngModel)]="cars[i].gps"
                class="form-control"
@@ -65,6 +76,7 @@
                [ngClass]="{ 'is-invalid': gps.touched && gps.invalid }">
       </div>
 	  
+	  <!-- voiture sÈlectionnÈ -->
 	  <div class="col-md-4">
 	  <label id="Voiture">Voiture :</label><br>
         <input type="text"
@@ -74,6 +86,7 @@
                #Voiture="ngModel">
       </div>
 	  
+	  <!-- boutton permettant de mettre ‡ jour le formulaire -->
       <div class="col-md-4">
         <input type="button"
                value="Update"
@@ -82,6 +95,8 @@
                (click)="updateCar(dateAller,dateRetour,Destination,objet,Passagers,gps,Voiture, item.id)">
       </div>
 	  <div>
+	  
+	  <!-- boutton de suppression de la demande -->
 	  <input type="button"
                  value="Delete"
                  class="btn btn-danger btn-sm"

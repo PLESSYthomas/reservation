@@ -1,3 +1,47 @@
-<p>
-  contact works!
-</p>
+<!-- page permettant d'effectuer une requÍte ‡ l'administrateur -->
+
+<html>
+<!-- formulaire -->
+<div id="contact">
+  <form #f="ngForm" name="theForm" (submit)="addCar(f)">
+  <!-- nom prenom -->
+  <div class="form-group">
+      <label id="titre">Nom Pr√©nom</label><br>
+      <input type="text"
+            class="form-control"
+            name="personne"
+            [(ngModel)]="message.personne"
+            #personne="ngModel"
+            required>
+	
+    </div>
+	<!-- objet de la demande -->
+	<div class="form-group">
+      <label id="titre">objet</label><br>
+      <input type="text"
+            class="form-control"
+            name="objet"
+            [(ngModel)]="message.objet"
+            #objet="ngModel"
+            required>
+	
+    </div>
+	<!-- message a envoye -->
+	<div class="form-group">
+      <label id="titre">message</label><br>
+      <input type="text"
+            class="form-control"
+            name="message"
+            [(ngModel)]="message.message"
+            #message="ngModel"
+            required>
+	
+	<!-- boutton de soumission -->
+    </div>
+	    <button
+        class="btn btn-primary btn-sm"
+        [disabled]="f.invalid">Add</button>
+  </form>
+</div>
+</html>
+	

@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column;
 	background-image:url("https://cdn.shopify.com/s/files/1/0533/2089/files/5-websites-to-download-free-subtle-textures-subtle.jpg?5724472906039650661");
-
+	color:white;	
 }
 
 .container {
@@ -91,7 +91,7 @@ body{
 
 }
 #items{
-	background-color:#774A35;
+	background-color:#474747;
 	width: auto;
     height: auto;
 	border: 5px;
@@ -100,4 +100,7 @@ body{
 	border-radius:20px;
 	opacity: 0.95;
 	margin-bottom:50px;
+}
+h2{
+	color:black;
 }
